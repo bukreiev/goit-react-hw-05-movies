@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { Link } from 'react-router-dom';
 
 export const List = styled.ul`
   list-style: none;
@@ -10,7 +11,7 @@ export const Item = styled.li`
   width: 200px;
   margin: 15px;
 `;
-export const Link = styled.a`
+export const StyledLink = styled(Link)`
   text-decoration: none;
   text-align: center;
 `;

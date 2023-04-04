@@ -1,4 +1,4 @@
-import { List, Item, Link, Title, Poster } from './List.styled';
+import { List, Item, StyledLink, Title, Poster } from './List.styled';
 import PropTypes from 'prop-types';
 
 function TrendingList({ movies }) {
@@ -7,14 +7,14 @@ function TrendingList({ movies }) {
       {movies.map(({ id, title, poster_path }) => {
         return (
           <Item key={id}>
-            <Link href={`/movies/${id}`} state={{ from: '/' }}>
+            <StyledLink to={`/movies/${id}`} state={{ from: '/' }}>
               <Poster
                 loading="lazy"
                 src={'https://image.tmdb.org/t/p/w200' + poster_path}
                 alt={title}
               />
               <Title>{title}</Title>
-            </Link>
+            </StyledLink>
           </Item>
         );
       })}
