@@ -10,7 +10,8 @@ function MovieDetails() {
   const [movie, setMovie] = useState({});
   const [isLoaded, setIsLoaded] = useState(false);
   const location = useLocation();
-  const backHref = location.state?.from ?? '../Movies.jsx';
+  const backHref =
+    location.state?.from ?? '../../components/List/MoviesList.jsx';
 
   useEffect(() => {
     async function getDetails() {

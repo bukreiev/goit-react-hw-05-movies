@@ -30,7 +30,8 @@ export async function getMovieCredits(id) {
 
 // getMovieReviews
 export async function getMovieReviews(id) {
-  const response = await endpoint(`
-  movie/${id}/reviews?api_key=${KEY}&page=1&language=en-US&`);
+  const response = await endpoint(
+    `movie/${id}/reviews?api_key=${KEY}&page=1&language=en-US&`
+  );
   return response.data.results;
 }
