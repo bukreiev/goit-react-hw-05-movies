@@ -27,15 +27,13 @@ function Cast() {
       <section>
         <Container>
           <List>
-            {results.map(({ name, character, profile_path, id }) => (
+            {results.map(({ id, name, character, profile_path }) => (
               <Item key={id}>
-                <div>
-                  <img
-                    src={'https://image.tmdb.org/t/p/w200' + profile_path}
-                    alt={name}
-                    style={{ objectFit: 'cover' }}
-                  />
-                </div>
+                <img
+                  src={'https:image.tmdb.org/t/p/w200' + profile_path}
+                  alt={name}
+                  style={{ objectFit: 'cover' }}
+                />
 
                 <p>
                   <b>Name:</b> {name}

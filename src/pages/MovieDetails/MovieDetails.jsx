@@ -59,10 +59,24 @@ function MovieDetails() {
           </Wrapper>
           <StyledList>
             <li>
-              <StyledLink to="cast">Cast</StyledLink>
+              <StyledLink
+                to="cast"
+                state={{
+                  from: backHref,
+                }}
+              >
+                Cast
+              </StyledLink>
             </li>
             <li>
-              <StyledLink to="reviews">Reviews</StyledLink>
+              <StyledLink
+                to="reviews"
+                state={{
+                  from: backHref,
+                }}
+              >
+                Reviews
+              </StyledLink>
             </li>
           </StyledList>
           <Suspense
